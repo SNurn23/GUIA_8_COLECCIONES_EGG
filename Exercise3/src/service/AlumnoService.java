@@ -24,12 +24,24 @@ public class AlumnoService {
         return new Alumno(name, notas);
     }
 
-    public double notaFinal(Alumno alumno){
+    public ArrayList<Alumno> agregarAlumno(Alumno alum) {
+        ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
+
+        if(!alumnos.contains(alum)){
+            alumnos.add(alum);
+        }else{
+            System.out.println("No se pudo agregar porque ya existe un registro del alumno");
+        }
+
+        return alumnos;
+    }
+
+    public void notaFinal(Alumno alumno){
         double prom = 0;
         for (Integer nota : alumno.getNotas()) {
             prom += nota;
         }
-        return prom/3;
+        System.out.printf("La nota final del alumno %s es: %.2f\n",alumno.getNombre(), (prom/3));
     }
 
     public Alumno buscarAlumno(String nombre, ArrayList<Alumno> alumnos){
@@ -43,12 +55,16 @@ public class AlumnoService {
 
     public void motrarAlumnos(ArrayList<Alumno> alumnos){
         int i = 1;
-        for (Alumno alum : alumnos){
-            System.out.println("\n------------------------------------");
-            System.out.printf("ALUMNO/A N° %d:\n", i++);
-            System.out.println("------------------------------------");
-            System.out.printf("Nombre completo: %s\n", alum.getNombre());
-            System.out.println("Notas: "+ alum.getNotas().toString());
+        if(!alumnos.isEmpty()){
+            for (Alumno alum : alumnos){
+                System.out.println("\n------------------------------------");
+                System.out.printf("ALUMNO/A N° %d:\n", i++);
+                System.out.println("--------------------------------------");
+                System.out.printf("Nombre completo: %s\n", alum.getNombre());
+                System.out.println("Notas: "+ alum.getNotas().toString());
+            }
+        }else{
+            System.out.println("No hay registros cargados");
         }
     }
 }

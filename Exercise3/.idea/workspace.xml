@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9da0957a-287c-482b-a93e-c1dd496b829f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Exercise4/src/modelo/Pelicula.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercise4/src/principal/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercise4/src/service/PeliculaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Exercise3/principal/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercise3/principal/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AlumnoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AlumnoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/service/AlumnoService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/principal/Main.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
