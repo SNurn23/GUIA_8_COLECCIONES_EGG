@@ -35,7 +35,12 @@ public class Main {
                     }
                     break;
                 case 2:
-                    alumnoSe.motrarAlumnos(alumnos);
+                    if(!alumnos.isEmpty()){
+                        alumnoSe.motrarAlumnos(alumnos);
+                    }else{
+                        System.out.println("No hay regsitros cargados");
+                    }
+
                     break;
                 case 3:
                     System.out.println("Ingrese el nombre del alumno: ");
