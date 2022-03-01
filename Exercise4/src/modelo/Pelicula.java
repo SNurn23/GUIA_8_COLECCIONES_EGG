@@ -1,6 +1,7 @@
 package modelo;
 
 import java.time.LocalTime;
+import java.util.Objects;
 
 public class Pelicula {
     private String titulo;
@@ -38,5 +39,21 @@ public class Pelicula {
 
     public void setDuracion(LocalTime duracion) {
         this.duracion = duracion;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pelicula pelicula = (Pelicula) o;
+        return Objects.equals(titulo, pelicula.titulo);
+    }
+
+    @Override
+    public String toString() {
+        return "Pelicula: " +
+                "titulo: " + titulo +
+                ", director: " + director +
+                ", duracion: " + duracion ;
     }
 }
