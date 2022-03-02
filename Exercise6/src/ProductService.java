@@ -12,7 +12,11 @@ public class ProductService {
         System.out.println("Enter the price of the product: ");
         double price = input.nextDouble();
 
-        addProduct(name,price);
+        if(!products.containsKey(name)){
+            addProduct(name, price);
+        }else{
+            System.out.println("The product is already loaded");
+        }
     }
 
     public void addProduct(String name, double price){
