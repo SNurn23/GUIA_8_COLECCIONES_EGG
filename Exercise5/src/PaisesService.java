@@ -1,12 +1,9 @@
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 public class PaisesService {
     Scanner input = new Scanner(System.in, StandardCharsets.ISO_8859_1).useDelimiter("\n").useLocale(Locale.US);
-    ArrayList<Pais> paises = new ArrayList<>();
+    ArrayList<Pais> paises = new ArrayList<Pais>();
 
     public Pais crearPais(){
         System.out.println("Ingrese el pais: ");
@@ -36,7 +33,8 @@ public class PaisesService {
         }while(op != 2);
     }
 
-    public void mostrarPaises(){
+    public void mostrarPaises() {
+        Collections.sort(paises);
         System.out.println("PAISES:");
         for (Pais p : paises) {
             System.out.println(p.getNombre());
@@ -66,10 +64,10 @@ public class PaisesService {
         String pais = input.next();
         if (buscarPais(pais)){
             eliminarPais(pais);
-            mostrarPaises();
         }else{
             System.out.println("No se encuentra registrado el pais ingresado");
         }
+        mostrarPaises();
     }
 
 

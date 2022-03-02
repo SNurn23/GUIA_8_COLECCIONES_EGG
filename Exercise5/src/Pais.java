@@ -1,4 +1,6 @@
-public class Pais {
+import java.util.Comparator;
+
+public class Pais implements Comparable<Pais> {
     private String nombre;
 
     public Pais(String nombre) {
@@ -16,4 +18,8 @@ public class Pais {
         this.nombre = nombre;
     }
 
+    @Override
+    public int compareTo(Pais o) {
+        return nombre.compareTo(o.nombre);
+    }
 }
